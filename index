@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveWell Therapist Wall Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .shadow-lg { box-shadow: none; }
+            .page-break { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 p-4 md:p-8">
+
+    <!-- Control Bar -->
+    <div class="max-w-7xl mx-auto mb-6 flex justify-between items-center no-print">
+        <p class="text-slate-500 text-sm">Deliverable 2: Internal Reference Chart</p>
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Print / Save PDF
+        </button>
+    </div>
+
+    <!-- Main Poster Container -->
+    <div class="max-w-[1400px] mx-auto bg-white shadow-xl rounded-xl overflow-hidden border border-slate-200">
+        
+        <!-- Header -->
+        <div class="bg-slate-900 text-white p-6 md:p-8 flex justify-between items-center border-b-4 border-blue-500">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">MOVEWELL <span class="text-blue-400">THERAPIST CHART</span></h1>
+                <p class="text-slate-400 mt-1 font-medium tracking-wide uppercase text-sm">Internal Reference • Issue–Protocol–Package Map</p>
+            </div>
+            <div class="text-right hidden md:block">
+                <div class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-blue-300 inline-block">CLEAR. FAST. STANDARDIZED.</div>
+            </div>
+        </div>
+
+        <!-- Section A: Diagnosis Map -->
+        <div class="p-6 md:p-8 page-break">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">A</span>
+                Quick Diagnosis Map
+                <span class="ml-auto text-sm font-normal text-slate-500">What they say &rarr; What it is</span>
+            </h2>
+            
+            <div class="overflow-x-auto rounded-lg border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider">
+                            <th class="p-4 font-bold border-b border-slate-200 w-1/4">Client Complaint</th>
+                            <th class="p-4 font-bold border-b border-slate-200 w-1/4">Root Cause & Muscles</th>
+                            <th class="p-4 font-bold border-b border-slate-200 w-1/6">Protocol</th>
+                            <th class="p-4 font-bold border-b border-slate-200 w-1/6">Duration</th>
+                            <th class="p-4 font-bold border-b border-slate-200 w-1/6">Package</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-slate-100">
+                        <!-- Row 1 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"My neck and shoulders are tight."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> Upper traps, levator, SCM, pec minor<br><span class="text-xs italic">Cause: Phone posture, overhead strain</span></td>
+                            <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold text-xs uppercase">Cervical Protocol</span></td>
+                            <td class="p-4 font-medium">30 min</td>
+                            <td class="p-4 font-bold text-green-700">5 Sessions</td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"Lower back pain, stiff after sitting or padel."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> QL, hamstrings, hip flexors, glutes<br><span class="text-xs italic">Cause: Weak core, hip imbalance</span></td>
+                            <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold text-xs uppercase">Low Back Protocol</span></td>
+                            <td class="p-4 font-medium">30–60 min</td>
+                            <td class="p-4 font-bold text-green-700">5–10 Sessions</td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"I feel tight everywhere / full-body tension."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> Global tightness (traps, TFL, pecs)<br><span class="text-xs italic">Cause: High training load, stress</span></td>
+                            <td class="p-4"><span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded font-bold text-xs uppercase">Upper-Lower Cross</span></td>
+                            <td class="p-4 font-medium">60 min</td>
+                            <td class="p-4 font-bold text-green-700">10 Sessions</td>
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"Shoulder pain from padel / overhead."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> Rotator cuff, lats, pec major, triceps<br><span class="text-xs italic">Cause: Overuse, mechanics</span></td>
+                            <td class="p-4"><span class="bg-orange-100 text-orange-800 px-2 py-1 rounded font-bold text-xs uppercase">Overhead Athlete</span></td>
+                            <td class="p-4 font-medium">60 min</td>
+                            <td class="p-4 font-bold text-green-700">5–10 Sessions</td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"Hip is tight / hard to rotate / stiffness."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> TFL, piriformis, hip rotators<br><span class="text-xs italic">Cause: Padel stance, sitting</span></td>
+                            <td class="p-4"><span class="bg-slate-200 text-slate-800 px-2 py-1 rounded font-bold text-xs uppercase">Hip & Knee Breakout</span></td>
+                            <td class="p-4 font-medium">30–60 min</td>
+                            <td class="p-4 font-bold text-green-700">5 Sessions</td>
+                        </tr>
+                        <!-- Row 6 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"Wrist or forearm strain."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> Forearm flexors, extensors<br><span class="text-xs italic">Cause: Grip issues, repeated strokes</span></td>
+                            <td class="p-4"><span class="bg-slate-200 text-slate-800 px-2 py-1 rounded font-bold text-xs uppercase">Forearm Breakout</span></td>
+                            <td class="p-4 font-medium">15–30 min</td>
+                            <td class="p-4 font-bold text-green-700">5 Sessions</td>
+                        </tr>
+                        <!-- Row 7 -->
+                        <tr class="hover:bg-blue-50 transition">
+                            <td class="p-4 font-semibold text-slate-900">"Foot or ankle stiffness / pain."</td>
+                            <td class="p-4 text-slate-600"><span class="font-bold text-slate-800">Muscles:</span> Gastroc, soleus, toe flexors<br><span class="text-xs italic">Cause: Running, padel lunges</span></td>
+                            <td class="p-4"><span class="bg-slate-200 text-slate-800 px-2 py-1 rounded font-bold text-xs uppercase">Ankle Breakout</span></td>
+                            <td class="p-4 font-medium">30 min</td>
+                            <td class="p-4 font-bold text-green-700">5 Sessions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 p-6 md:p-8 pt-0">
+            
+            <!-- Section B: Assessment Map -->
+            <div class="lg:col-span-2 page-break">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">B</span>
+                    Assessment &rarr; Root Cause
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- Test Card -->
+                    <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">1. Neck Rotation Test</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Limited:</p>
+                            <p class="text-slate-600">Traps / Levator / SCM</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Cervical Protocol</p>
+                        </div>
+                    </div>
+
+                    <!-- Test Card -->
+                    <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">2. Shoulder Flexion Test</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Limited:</p>
+                            <p class="text-slate-600">Pec major/minor, lats</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Cervical Protocol + Pec Stretch</p>
+                        </div>
+                    </div>
+
+                    <!-- Test Card -->
+                    <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">3. Thoracic Rotation Test</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Limited:</p>
+                            <p class="text-slate-600">Upper back stiffness, tight ribs</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Upper-Lower Cross Protocol</p>
+                        </div>
+                    </div>
+
+                    <!-- Test Card -->
+                    <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">4. Hip IR/ER Test</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Limited:</p>
+                            <p class="text-slate-600">TFL, piriformis, hip rotators</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Hip & Knee Breakout</p>
+                        </div>
+                    </div>
+
+                    <!-- Test Card -->
+                    <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">5. Hamstring Flex Test</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Limited:</p>
+                            <p class="text-slate-600">Hamstrings, posterior chain overload</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Low Back Protocol</p>
+                        </div>
+                    </div>
+
+                     <!-- Test Card -->
+                     <div class="border border-slate-200 rounded p-4 bg-slate-50">
+                        <h3 class="font-bold text-slate-900">6. Overhead Reach (Padel)</h3>
+                        <div class="text-sm mt-2">
+                            <p class="text-red-600 font-semibold">If Painful/Limited:</p>
+                            <p class="text-slate-600">Rotator cuff tension</p>
+                            <p class="mt-2 font-bold text-blue-700">&rarr; Overhead Athlete Protocol</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section C & D: Sidebar Strategy -->
+            <div class="space-y-6 page-break">
+                
+                <!-- Standard Package -->
+                <div class="bg-slate-50 border-l-4 border-green-500 p-6 rounded shadow-sm">
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center">
+                        <span class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">C</span>
+                        Recommendations
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4 uppercase tracking-wide">Never give options. Give a plan.</p>
+                    
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-semibold text-slate-700">Mild</span>
+                            <span>1x/week • 5 sessions</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-semibold text-slate-700">Moderate</span>
+                            <span>2x/week • 10 sessions</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-semibold text-slate-700">Chronic</span>
+                            <span>2x/week (60m) • 10 ses</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-semibold text-slate-700">Athlete</span>
+                            <span>Maintenance • Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Cheat Codes -->
+                <div class="bg-slate-800 text-white p-6 rounded shadow-lg">
+                    <h2 class="text-xl font-bold text-white mb-3 flex items-center">
+                        <span class="bg-red-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">D</span>
+                        Cheat Codes
+                    </h2>
+                    <p class="text-xs text-slate-400 mb-4 uppercase tracking-wide">Internal Use Only</p>
+
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><strong>Find ONE Core Problem:</strong> Never list issues. Pick the biggest one.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><strong>Show the Imbalance:</strong> "Left is tighter than right — feel that?"</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><strong>Link to Timeline:</strong> "3–5 sessions to fix the root issue."</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 pt-4 border-t border-slate-600">
+                        <p class="text-xs text-slate-400 mb-2 font-bold">GOLDEN PHRASE:</p>
+                        <p class="italic text-blue-200">"This kind of tightness needs at least 3–5 sessions to stabilise."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
